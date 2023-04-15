@@ -1,0 +1,477 @@
+/* From the :root element you can easily change the colors of the design, its size and so on. */
+
+:root {
+    /* You can change the font family in the whole design here. (You need to add the font family to the codes.) */
+    --font_family: 'Inter', sans-serif;
+    /* You can change the font size here, is proportional to all texts. */
+    --font_size: 16px;
+    /* You can change the background color by typing the color code. (If you do not enter a background-image image, the background-color will be active.) */
+    --background_color: #000;
+    --background_image: url("../img/wallpaper.png");
+    /* You can change the frame thickness and color of the picture by typing the number of pixels and the color code. */
+    --image_border_color: #1f232e;
+    --image_border_px: 3px;
+    /* You can change the width and size of the picture by typing the number of pixels. */
+    --image_width: 140px;
+    --image_height: 140px;
+    /* You can change the colors of the title and description section by typing the color codes. */
+    --title_color: #000000;
+    --description_color: #fff;
+    /* You can change the colors of social media icons by changing the color code. */
+    --svg_color: #050505;
+    /* You can change the background, text color and active color of the menu by changing the color codes. */
+    --menu_background_color: #1d1e24;
+    --menu_text_color: #fff;
+    --menu_active_text_color: #d7e04f;
+    /* You can change the button's background, text color and active color by changing the color codes. */
+    --button_background_color: #1d1e24;
+    --button_text_color: #fff;
+    --button_text_hover_color: #d7e04f;
+    /* You can change the background, text color and active color of the text field by changing the color codes. */
+    --textarea_background_color: #1d1e24;
+    --textarea_text_color: #fff;
+    --textarea_link_text_color: #d7e04f;
+    /* You can change the background, text color and active color of the footer area by changing the color codes. */
+    --footer_background_color: #1d1e24;
+    --footer_text_color: #fff;
+    --footer_link_text_color: #d7e04f;
+}
+
+
+/* Basic Codes */
+
+body {
+    font: var(--font_size) var(--font_family);
+    font-weight: 400;
+    line-height: 1.5;
+    background: var(--background_color) var(--background_image) no-repeat center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex_column_center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_row_center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_no_wrap_row_center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Logo, Title and Description Codes */
+
+.header_img {
+    padding-top: 1em;
+}
+
+.header_img img {
+    height: var(--image_height);
+    width: var(--image_width);
+    border: var(--image_border_px) solid var(--image_border_color);
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+}
+
+.header_text h1 {
+    color: var(--title_color);
+    font-size: 2em;
+}
+
+.header_text h2 {
+    color: var(--description_color);
+    font-size: 1.5em;
+}
+
+
+/* Social Media Icons Codes */
+
+.header_svg_list {
+    padding-top: 1em;
+}
+
+.header_svg_item {
+    width: 2.1em;
+    height: 2.1em;
+    cursor: pointer;
+}
+
+.header_svg_item+.header_svg_item {
+    margin-left: 1em;
+}
+
+.header_svg_item svg {
+    fill: var(--svg_color);
+}
+
+
+/* Menu Codes */
+
+#header_nav_menu_item_1 {
+    color: var(--menu_active_text_color);
+}
+
+#header_nav_menu_item_2,
+#header_nav_menu_item_3 {
+    color: var(--menu_text_color);
+}
+
+#header_nav_menu_item_1 {
+    color: var(--menu_active_text_color);
+}
+
+#header_nav_menu_item_5,
+#header_nav_menu_item_6 {
+    color: var(--menu_text_color);
+}
+
+.header_nav_menu_list {
+    padding-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.header_nav_menu_item {
+    color: var(--menu_text_color);
+    background-color: var(--menu_background_color);
+    text-align: center;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: 0.10s ease;
+    font-size: 1.1em;
+}
+
+.header_nav_menu_item+.header_nav_menu_item {
+    margin-left: 0.4em;
+}
+
+
+/* Menu Container Codes */
+
+main {
+    margin-bottom: auto;
+}
+
+#main_section_container_2,
+#main_section_container_3 {
+    display: none;
+}
+
+main {
+    margin-bottom: auto;
+}
+
+#main_section_container_4,
+#main_section_container_5 {
+    display: none;
+}
+
+.main_a_item {
+    margin-top: 1em;
+    text-decoration: none;
+}
+
+.main_text_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--button_text_color);
+    background-color: var(--button_background_color);
+    width: 41em;
+    margin-top: 1em;
+    padding: 0.8em;
+    border-radius: 0.3em;
+    min-height: 3.7em;
+    text-align: center;
+}
+
+.main_button_item {
+    color: var(--button_text_color);
+    background-color: var(--button_background_color);
+    width: 41em;
+    border-radius: 1em;
+    min-height: 3.7em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main_small_button_list {
+    display: flex;
+    flex-direction: row;
+}
+
+.main_small_a_item {
+    margin-top: 1em;
+    text-decoration: none;
+}
+
+.main_small_a_item+.main_small_a_item {
+    margin-left: 10px;
+}
+
+.main_small_button_item:hover,
+.main_button_item:hover {
+    color: var(--button_text_hover_color);
+    transform: scale(1.02);
+    transition: 0.10s ease;
+}
+
+.main_small_button_item {
+    color: var(--button_text_color);
+    background-color: var(--button_background_color);
+    width: calc(41em / 2 - 5px);
+    border-radius: 1em;
+    min-height: 3.7em;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* Footer Codes */
+
+.footer_div_item {
+    color: var(--footer_text_color);
+    background: var(--footer_background_color);
+    padding: 1em;
+    margin-top: 1.5em;
+}
+
+.footer_a_item {
+    color: var(--footer_link_text_color);
+    text-decoration: none;
+}
+
+
+/* CSS */
+
+.button-34 {
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
+body {
+    background: #e4ebf4;
+    padding: 2rem;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+.olcards,
+.olcards * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.olcards {
+    list-style: none;
+    counter-reset: cardCount;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    --cardsGap: 1rem;
+    gap: var(--cardsGap);
+    padding-bottom: var(--cardsGap);
+}
+
+.olcards li {
+    counter-increment: cardCount;
+    display: flex;
+    color: white;
+    --labelOffset: 1rem;
+    --arrowClipSize: 1.5rem;
+    margin-top: var(--labelOffset);
+}
+
+.olcards li::before {
+    content: counter(cardCount, decimal-leading-zero);
+    background: white;
+    color: var(--cardColor);
+    font-size: 2em;
+    font-weight: 700;
+    transform: translateY(calc(-1 * var(--labelOffset)));
+    margin-right: calc(-1 * var(--labelOffset));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+}
+
+.olcards li .content {
+    background-color: var(--cardColor);
+    --inlinePadding: 1em;
+    --boxPadding: 0.5em;
+    display: grid;
+    padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize)) var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+    grid-template-areas: "icon title" "icon text";
+    gap: 0.25em 1em;
+    clip-path: polygon( 0 0, calc(100% - var(--arrowClipSize)) 0, 100% 50%, calc(100% - var(--arrowClipSize)) 100%, calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)), 0 calc(100% + var(--cardsGap)));
+    position: relative;
+}
+
+.olcards li .content::before {
+    content: "";
+    position: absolute;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
+}
+
+.olcards li .content::after {
+    content: "";
+    position: absolute;
+    height: var(--cardsGap);
+    width: var(--cardsGap);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+    left: 0;
+    top: 100%;
+}
+
+.olcards li .icon {
+    grid-area: icon;
+    align-self: center;
+    font-size: 2em;
+}
+
+.olcards li .content .title {
+    grid-area: title;
+    font-size: 1.25em;
+    /* font-weight: 700; */
+}
+
+.olcards li .content .text {
+    grid-area: text;
+}
+
+
+/* CSS */
+
+.button-89 {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.button-89:active {
+    background: var(--color);
+    color: #fff;
+}
+
+
+/* Responsive Codes */
+
+@media (max-width: 768px) {
+    .main_text_item {
+        width: 92vw;
+    }
+    .main_small_button_item {
+        width: calc(92vw / 2 - 5px);
+        ;
+    }
+    .main_button_item {
+        width: 92vw;
+    }
+}
+
+
+/* CSS */
+
+.button-74 {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-74:hover {
+    background-color: #fff;
+}
+
+.button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .button-74 {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}
